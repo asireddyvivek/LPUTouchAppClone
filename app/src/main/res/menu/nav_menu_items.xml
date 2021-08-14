@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:id="@+id/i1">
+        <item
+            android:id="@+id/item1"
+            android:icon="@drawable/admission"
+            android:title="Admission Enquiry"/>
+    </group>
+    <group android:id="@+id/i2">
+        <item
+            android:id="@+id/item2"
+            android:icon="@drawable/announce"
+            android:title="Announcements"/>
+    </group>
+
+    <group android:id="@+id/i3">
+        <item
+            android:id="@+id/item3"
+            android:icon="@drawable/assign"
+            android:title="Assignments"
+            />
+    </group>
+    <group android:id="@+id/i4">
+        <item
+            android:id="@+id/item4"
+            android:title="Attendance"
+            android:icon="@drawable/attend"/>
+    </group>
+    <group android:id="@+id/i5">
+        <item
+            android:id="@+id/item5"
+            android:title="Backlog Registration"
+            android:icon="@drawable/backlog"/>
+    </group>
+    <group android:id="@+id/i6">
+        <item
+            android:id="@+id/item6"
+            android:title="Lecture Feedback"
+            android:icon="@drawable/feed"/>
+    </group>
+    <group android:id="@+id/i7">
+        <item
+            android:id="@+id/item7"
+            android:title="Book Appointment"
+            android:icon="@drawable/appoint"/>
+    </group>
+    <group android:id="@+id/i8">
+        <item
+            android:id="@+id/item8"
+            android:title="Result"
+            android:icon="@drawable/res"/>
+    </group>
+</menu>

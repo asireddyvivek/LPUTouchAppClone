@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    app:layout_constraintBottom_toTopOf="@id/guideline"
+    app:layout_constraintTop_toTopOf="parent"
+    android:orientation="vertical"
+    android:background="@color/olive"
+    tools:ignore="MissingConstraints">
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/username"
+        android:inputType="number"
+        android:textColor="#fff"
+        android:textSize="15dp"
+        android:background="@drawable/edit_text"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="50dp"
+        android:padding="10dp"
+        android:hint="User Id"
+        android:textColorHint="#fff"
+        android:drawableLeft="@drawable/user"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/password"
+        android:textColor="#fff"
+        android:textSize="15dp"
+        android:background="@drawable/edit_text"
+        android:inputType="textPassword"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:hint="Password"
+        android:padding="10dp"
+        android:textColorHint="#fff"
+        android:drawableLeft="@drawable/pass"
+        android:layout_below="@id/username"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/sign_in"
+        android:padding="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:text="Sign in"
+        android:textSize="15dp"
+        android:textColor="#fff"
+        android:background="@color/orange"
+        android:layout_below="@id/password"
+        android:layout_marginTop="20dp"
+        android:onClick="onSignIn"/>
+</RelativeLayout>
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/guideline"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="@id/guideline"
+        android:orientation="vertical"
+        android:background="#fff"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/results"/>
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="80dp"
+            android:scrollbars="none">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:layout_width="200dp"
+                android:layout_height="80dp"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="50dp"
+                >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/t1"
+                    android:layout_centerHorizontal="true"
+                    android:text="90% of tha game is half mental."
+                    android:layout_alignParentTop="true"/>
+                <View
+                    android:layout_width="160dp"
+                    android:layout_height="1dp"
+                    android:id="@+id/line1"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="#000"
+                    android:layout_centerInParent="true"
+                    android:layout_below="@id/t1"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="Yogi Berra"
+                    android:textColor="@color/orange"
+                    android:layout_alignParentBottom="true"/>
+            </RelativeLayout>
+            </FrameLayout>
+            </RelativeLayout>
+
+</HorizontalScrollView>
+    </RelativeLayout>
+    <ImageView
+        android:layout_width="160dp"
+        android:layout_height="150dp"
+        android:src="@drawable/lpu_logo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/guideline"
+        app:layout_constraintBottom_toBottomOf="@id/guideline"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

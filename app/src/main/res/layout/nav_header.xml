@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/olive"
+    android:id="@+id/header">
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/cimg"
+        android:src="@drawable/img1"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/reg_num"
+        android:paddingTop="3dp"
+        android:text="11802339"
+        android:textColor="#fff"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/cimg"
+        android:layout_marginTop="5dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/course_details"
+        android:text="P132:B.Tech (Computer Science and Engineering)"
+        android:textColor="#fff"
+        android:gravity="center"
+        android:layout_below="@id/reg_num"
+        android:layout_marginTop="5dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/profile"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/course_details"
+        android:background="#fff"
+        android:text="View Profile"
+        android:textAllCaps="false"
+        android:padding="5dp"
+        android:textColor="@color/olive"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="20dp"/>
+
+    <SearchView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/profile"
+        android:queryHint="Search"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"/>
+</RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/header"
+        android:layout_marginTop="10dp">
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:id="@+id/rate"
+            android:text="Rate Us"
+            android:textSize="20dp"
+            android:background="@color/olive"
+            android:textAllCaps="false"
+            android:padding="10dp"
+            android:layout_alignParentLeft="true"
+            android:drawableLeft="@drawable/rate"
+            android:onClick="onRate"
+            />
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:id="@+id/logOut"
+            android:drawableLeft="@drawable/log_out"
+            android:text="Logout"
+            android:textSize="20dp"
+            android:background="@color/orange"
+            android:textAllCaps="false"
+            android:padding="10dp"
+            android:layout_toRightOf="@id/rate"
+            android:layout_alignParentRight="true"
+            android:onClick="onSignOut"/>
+
+
+
+    </RelativeLayout>
+</RelativeLayout>
+
+

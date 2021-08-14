@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/feedback"
+    tools:context=".RateUs">
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:elevation="400dp"
+        android:id="@+id/toolbar">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Feedback"
+                android:textColor="#000"
+                android:textSize="30dp"
+                android:layout_centerInParent="true"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/back"
+                android:layout_alignParentLeft="true"/>
+
+        </RelativeLayout>
+
+
+    </androidx.appcompat.widget.Toolbar>
+    <RatingBar
+        android:layout_width="275dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/rb"
+        android:numStars="5"
+        android:rating="3"
+        android:progressTint="@color/orange"
+        android:secondaryProgressTint="@color/orange"
+        android:progressBackgroundTint="@color/olive"
+        android:padding="20dp"
+        android:layout_below="@id/toolbar"
+        android:layout_centerHorizontal="true"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn"
+        android:text="Submit"
+        android:textColor="#fff"
+        android:textSize="15dp"
+        android:padding="5dp"
+        android:background="@color/olive"
+        android:layout_below="@id/rb"
+        android:layout_marginRight="40dp"
+        android:layout_marginLeft="40dp"
+        android:elevation="30dp"
+        android:onClick="rateApp"/>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_margin="30dp"
+        android:layout_below="@id/btn"
+        android:id="@+id/result"/>
+</RelativeLayout>
